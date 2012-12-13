@@ -66,7 +66,8 @@ class Contacts
         data.force_encoding('UTF-8')
         separator = data[7]
         unless data.valid_encoding?
-          data = data.slice(2..-1).split("\u0000").join('')
+          data.force_encoding('iso-8859-1')
+          data = data.slice(2..-1).split("\x00").join('')
           separator = ','
         end
         @contacts = CSV.parse(data, {:headers => true, :col_sep => separator}).map do |row|
