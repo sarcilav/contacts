@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.description = "A universal interface to grab contact list information from Yahoo, AOL, Gmail, Hotmail, Plaxo, GMX.net, Web.de, inbox.lt, seznam.cz, t-online.de. Now supporting Ruby 1.9."
 
   s.add_dependency 'json'
-  s.add_dependency 'gdata_19', '~> 1.1.3'
-  s.add_dependency 'nokogiri', '~> 1.5.0'
+  s.add_dependency 'gdata_19', '~> 1.1.5'
+  s.add_dependency 'nokogiri', '~> 1.6.6.2'
 
   s.files = Dir.glob("lib/**/*") + Dir.glob("examples/**/*") + %w(LICENSE README.rdoc Rakefile)
   s.require_path = "lib"
